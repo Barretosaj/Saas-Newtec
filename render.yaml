@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: limpabordas
+    env: docker
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app  # Assume que seu arquivo principal é app.py na raiz
